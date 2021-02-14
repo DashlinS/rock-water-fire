@@ -1,0 +1,94 @@
+@font-face {
+  font-family: herculanum;
+  src: url(../fonts/herculanum.ttf) format('truetype');
+}
+* {
+  padding:  0;
+  margin: 0;
+  text-decoration: none;
+  font-family: herculanum;
+}
+
+
+a:hover, a:visited, a:link, a:active {
+  color: inherit;
+}
+
+body {
+  background: url(../images/background1.jpg) no-repeat;
+  background-size: cover;
+}
+/* TITLE SECTION */
+h1 {
+  font-size: 4rem;
+  color: rgba(253, 253, 0, 0.836);
+  margin-top: 50px;
+}
+/* MAIN */
+/* .storySection, .benderGif, .pressToPlay {
+} */
+
+.box {
+  height:300px;
+  width: 14%;
+  /* margin: 20px 15px; */
+  display: flex;
+  align-items: center;
+}
+.box img {
+  border-radius: 10px;
+  width: 200px;
+  border: 2px solid rgb(92, 120, 153);
+}
+
+/* GIF SECTION */
+.benderGif {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainTask {
+  border: 3px solid rgba(235, 235, 10, 0.959);
+  border-radius: 10px;
+  height: 320px;
+  width: 530px;
+  background-color: rgba(55, 87, 126, 0.876);
+  margin: 50px 40px 0px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainTask p {
+  text-align: center;
+  font-size: 1.3rem;
+  color: rgb(255, 255, 8);
+  margin-bottom: 30px;
+}
+
+.mainTask .rules{
+  color: rgb(255, 255, 8);
+  font-size: 1.4rem;
+}
+
+/* STORY AREA */
+.topSection {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* START BUTTON */
+.pressToPlay {
+  height: 50px;
+  text-align: center;
+}
+.pressToPlay h2 {
+  font-size: 2rem;
+  margin-top: 5px;
+  color: rgba(251, 251, 8, 0.801);
+  
+}
+
