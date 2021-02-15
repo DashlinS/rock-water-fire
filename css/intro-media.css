@@ -1,0 +1,193 @@
+@media only screen and (max-width: 500px){
+  h1 {
+    font-size: 2rem;
+    margin-top: 0px;
+  }
+
+  body {
+    background-position: center;
+  }
+
+  .benderGif {
+    height: 400px;
+  }
+
+  .box img {
+    display: none;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .mainTask {
+    margin-top: 0px;
+    height: 400px; 
+    width: 350px;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 650px){
+    h1 {
+    font-size: 2.5rem;
+    margin-top: 0px;
+  }
+  
+  body {
+    background-position: center;
+  }
+
+  .benderGif {
+    height: 400px;
+  }
+
+  .box img {
+    display: none;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .mainTask {
+    margin-top: 0px;
+    height: 400px; 
+    width: 400px;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 800px){
+   h1 {
+    font-size: 2.5rem;
+    margin-top: 0px;
+  }
+  
+  body {
+    background-position: center;
+  }
+
+  .benderGif {
+    height: 400px;
+  }
+
+  .box img {
+    display: none;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .mainTask {
+    margin-top: 0px;
+    height: 400px; 
+    width: 400px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 950px){
+   h1 {
+    font-size: 3rem;
+    margin-top: 0px;
+  }
+  
+  body {
+    background-position: center;
+  }
+
+  .benderGif {
+    height: 400px;
+  }
+
+  .box img {
+    display: none;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .mainTask {
+    margin-top: 0px;
+    height: 400px; 
+    width: 400px;
+  }
+}
+
+@media (min-width: 951px) and (max-width: 1100px){
+   h1 {
+    font-size: 3rem;
+    margin-top: 0px;
+  }
+  
+  body {
+    background-position: center;
+  }
+
+  .benderGif {
+    height: 400px;
+  }
+
+  .box img {
+    width: 130px;
+  }
+
+
+  .mainTask {
+    margin-top: 0px;
+    height: 400px; 
+    width: 400px;
+  }
+}
+
+@media (min-width: 1101px) and (max-width: 1250px){
+   h1 {
+    font-size: 3rem;
+    margin-top: 0px;
+  }
+  
+  body {
+    background-position: center;    
+  }
+
+  .benderGif {
+    height: 400px;
+  }
+
+  .box img {
+    width: 150px;
+  }
+
+
+  .mainTask {
+    margin-top: 0px;
+    height: 400px; 
+    width: 400px;
+  }
+}
+
+
+@media (min-width: 1251px) and (max-width: 1400px){
+   h1 {
+    font-size: 3rem;
+    margin-top: 0px;
+  }
+  
+  body {
+    background-position: center;    
+  }
+
+  .benderGif {
+    height: 450px;
+  }
+
+  .box img {
+    width: 170px;
+  }
+
+  .mainTask {
+    margin-top: 0px;
+    height: 400px; 
+    width: 400px;
+  }
+}

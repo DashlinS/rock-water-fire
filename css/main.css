@@ -2,6 +2,7 @@
   font-family: herculanum;
   src: url(../fonts/herculanum.ttf) format('truetype');
 }
+
 * {
   padding:  0;
   margin: 0;
@@ -16,11 +17,13 @@ a:hover, a:visited, a:link, a:active {
 body {
   background: url(../images/atlaMap.jpg) no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 /* MAIN */
 .box {
   height: 720px;
   float: left;
+  height: 100vh;
 }
 .sectionOne, .sectionThree {
   display: flex;
@@ -106,7 +109,7 @@ body {
 /* GIF SECTION */
 .gifSection{
   width: 100%;
-  height: 250px;
+  height: 230px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,7 +196,6 @@ body {
   text-align: center;
   font-size: 1.2rem;
   color: rgba(235, 235, 10, 0.733);
-  
 }
 /* SECTION THREE */
 .sectionThree{

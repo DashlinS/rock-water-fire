@@ -6,6 +6,7 @@
   padding:  0;
   margin: 0;
   text-decoration: none;
+  list-style-type: none;
   font-family: herculanum;
 }
 
@@ -15,8 +16,9 @@ a:hover, a:visited, a:link, a:active {
 }
 
 body {
-  background: url(../images/background1.jpg) no-repeat;
+  background: url(../images/background1.jpg) no-repeat ;
   background-size: cover;
+  height: 100vh;
 }
 /* TITLE SECTION */
 h1 {
