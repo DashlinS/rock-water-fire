@@ -1,7 +1,7 @@
 # Rock Water Fire
 
 
-  This project an experience! To be able to create based on one of my favorite cartoons was educational and fun! I was able to implement my thoughts from my wire frame and it came out better than expected. Let me know your thoughts!
+  This project was a great experience! To be able to create based on one of my favorite cartoons was educational and fun! I was able to implement my thoughts from my wire frame and it came out better than expected. Let me know your thoughts!
 
 &emsp;
 
