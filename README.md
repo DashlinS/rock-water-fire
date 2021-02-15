@@ -1,22 +1,21 @@
-# &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rock Water Fire
+# Rock Water Fire
 
-<p align="center">
+
   This project an experience! To be able to create based on one of my favorite cartoons was educational and fun! I was able to implement my thoughts from my wire frame and it came out better than expected. Let me know your thoughts!
-</p>
+
 &emsp;
-<p align="center">
-<img src="https://github.com/DashlinS/rock-water-fire/blob/master/gifs/ATLA-begin.png" width="700">
-</p>
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Click Here to go to the website!](https://atla-rockwaterfire.netlify.app/)
+<img src="https://github.com/DashlinS/rock-water-fire/blob/main/gifs/ATLA-begin.png" width="700">
 
-<p align="center">
-<img src="https://github.com/DashlinS/rock-water-fire/blob/master/gifs/ATLA-play.gif" width="700">
-</p>
+
+[Click Here to go to the website!](https://atla-rockwaterfire.netlify.app/)
+
 
 ## How Its Made 
 
 **Languages used:** Html, CSS, Javascript
+
+<img src="https://github.com/DashlinS/rock-water-fire/blob/main/gifs/ATLA-play.gif" width="700">
 
 # What I Learned
 
