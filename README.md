@@ -8,7 +8,7 @@
 <img src="https://github.com/DashlinS/rock-water-fire/blob/main/gifs/ATLA-begin.png" width="700">
 
 
-[Click Here to go to the website!](https://atla-rockwaterfire.netlify.app/)
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Click Here to go to the website!](https://atla-rockwaterfire.netlify.app/)
 
 
 ## How Its Made 
