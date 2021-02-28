@@ -31,3 +31,4 @@ Check out some of my other work using the DOM!
 * [Calculator](https://github.com/DashlinS/calculator)
 * [Todo List](https://github.com/DashlinS/ToDo_List/tree/answer)
 * [slot Machine](https://github.com/DashlinS/SlotMachine/blob/answer/README.md)
+* [Tic-Tac-Toe](https://github.com/DashlinS/tic-tac-toe/tree/answer)
