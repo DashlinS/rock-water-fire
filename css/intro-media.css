@@ -1,193 +1,259 @@
-@media only screen and (max-width: 500px){
+/* @media (width <= 320px){}  min-width */
+/* @media (width >= 320px){}  max-width */
+/* Web to app=max-width App to web=min-width * only if you’re not using a range */
+
+/* Smart Phone 320px*/
+@media (width <= 20em){
   h1 {
-    font-size: 2rem;
-    margin-top: 0px;
+      font-size: 3em;
+    }
+  
+    .pressToPlay h2 {
+      font-size: 1.5em;
+      margin: 0em;
+    }
+  
+    .midSection {
+      justify-content: center;
+    }
+  
+    .midSection .box {
+      display: none;
+    }
+  
+    .mainTask {
+      height: 22.625em;
+      width: 12.5em;
+    }
+  
+    .mainTask p {
+      font-size: 0.9375em;
+    }
+  
+    .mainTask .rules {
+      font-size: 0.875em;
+    }
+}
+
+@media(20em <= width <= 34em){
+  h1 {
+    font-size: 3.5em;
   }
 
-  body {
-    background-position: center;
+  .pressToPlay h2 {
+    font-size: 2em;
+    margin: 0em;
   }
 
-  .benderGif {
-    height: 400px;
+  .pressToPlay a {
+    padding: 0.3125em;
   }
 
-  .box img {
-    display: none;
+  .midSection {
+    justify-content: center;
   }
 
-  .box {
+  .midSection .box {
     display: none;
   }
 
   .mainTask {
-    margin-top: 0px;
-    height: 400px; 
-    width: 350px;
+    height: 22.75em;
+    width: 15.625em;
+  }
+
+  .mainTask p {
+    font-size: 1.125em;
+    /* margin-top: 20px; */
+  }
+
+  .mainTask .rules {
+    font-size: 1.125em;
   }
 }
 
-@media (min-width: 501px) and (max-width: 650px){
+/* ipad portrait 1024px*/
+@media (34em <= width <= 65em){
+  h1 {
+    font-size: 5em;
+  }
+  .pressToPlay h2 {
+    font-size: 3em;
+  }
+
+  .midSection {
+    justify-content: center;
+  }
+
+  .midSection .box {
+    display: none;
+  }
+
+  .mainTask .rules {
+    font-size: 1.8em;
+  }
+}
+
+/* laptops 1124px*/
+@media (65em <= width <= 76.5em) 
+and (-webkit-min-device-pixel-ratio: 1){
     h1 {
-    font-size: 2.5rem;
-    margin-top: 0px;
+    font-size: 4em;
   }
-  
-  body {
-    background-position: center;
-  }
-
-  .benderGif {
-    height: 400px;
+  #mainContainer {
+    margin: 0px;
+    padding: 0px;
   }
 
-  .box img {
-    display: none;
+  .pressToPlay h2 {
+    font-size: 3em;
+    margin: 0px;
   }
 
   .box {
-    display: none;
-  }
-
-  .mainTask {
-    margin-top: 0px;
-    height: 400px; 
-    width: 400px;
-  }
-}
-
-@media (min-width: 651px) and (max-width: 800px){
-   h1 {
-    font-size: 2.5rem;
-    margin-top: 0px;
-  }
-  
-  body {
-    background-position: center;
-  }
-
-  .benderGif {
-    height: 400px;
+    height: 15.625em;
   }
 
   .box img {
-    display: none;
+    width: 10.625em;
+  }
+
+  .mainTask {
+    height: 15.625em;
+    width: 15.625em;
+    margin: 0em;
+  }
+
+  .mainTask p {
+    font-size: 0.8125em;
+    /* margin-top: 20px; */
+  }
+
+  .mainTask .rules {
+    font-size: 0.9375em;
+  }
+}
+/* laptops retina - 1124px */
+@media (65em <= width <= 76.5em) 
+and (-webkit-min-device-pixel-ratio: 2) 
+and (min-resolution: 192dpi){
+  h1 {
+    font-size: 4em;
+  }
+  #mainContainer {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .pressToPlay h2 {
+    font-size: 3em;
+    margin: 0px;
+  }
+  .box {
+    height: 15.625em;
+  }
+
+  .box img {
+    width: 10.625em;
+  }
+
+  .mainTask {
+    height: 15.625em;
+    width: 15.625em;
+  }
+
+  .mainTask p {
+    font-size: 0.8125em;
+    /* margin-top: 20px; */
+  }
+
+  .mainTask .rules {
+    font-size: 0.9375em;
+  }
+}
+
+@media (76.5em <= width <= 96.25em){
+  h1 {
+    font-size: 4em;
+  }
+
+  #mainContainer {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .pressToPlay h2 {
+    font-size: 3em;
+    margin: 0px;
   }
 
   .box {
-    display: none;
-  }
-
-  .mainTask {
-    margin-top: 0px;
-    height: 400px; 
-    width: 400px;
-  }
-}
-
-@media (min-width: 801px) and (max-width: 950px){
-   h1 {
-    font-size: 3rem;
-    margin-top: 0px;
-  }
-  
-  body {
-    background-position: center;
-  }
-
-  .benderGif {
-    height: 400px;
+    height: 18.75em;
   }
 
   .box img {
-    display: none;
+    width: 12.5em;
+  }
+
+  .mainTask {
+    height: 15.625em;
+    width: 18.75em;
+  }
+  .mainTask p {
+    font-size: 0.9375em;
+    /* margin-top: 20px; */
+  }
+
+  .mainTask .rules {
+    font-size: 1.0625em;
+  }
+}
+
+/* larger screens 1824px*/ 
+@media (96.25em <= width <= 114em ){
+  h1 {
+    font-size: 5em;
+  }
+
+  .pressToPlay h2 {
+    font-size: 4em;
   }
 
   .box {
-    display: none;
-  }
-
-  .mainTask {
-    margin-top: 0px;
-    height: 400px; 
-    width: 400px;
-  }
-}
-
-@media (min-width: 951px) and (max-width: 1100px){
-   h1 {
-    font-size: 3rem;
-    margin-top: 0px;
-  }
-  
-  body {
-    background-position: center;
-  }
-
-  .benderGif {
-    height: 400px;
+    height: 21.875em;
   }
 
   .box img {
-    width: 130px;
+    width: 15.625em;
   }
 
-
   .mainTask {
-    margin-top: 0px;
-    height: 400px; 
-    width: 400px;
+    height: 18.75em;
+    width: 26.875em;
+  }
+  .mainTask p {
+    font-size: 1.2625em;
   }
 }
 
-@media (min-width: 1101px) and (max-width: 1250px){
-   h1 {
-    font-size: 3rem;
-    margin-top: 0px;
-  }
-  
-  body {
-    background-position: center;    
+@media (114em <= width <= 130em) {
+  .pressToPlay h2 {
+    font-size: 4.5em;
   }
 
-  .benderGif {
-    height: 400px;
+  .box {
+    height: 28.125em;
   }
 
   .box img {
-    width: 150px;
-  }
-
-
-  .mainTask {
-    margin-top: 0px;
-    height: 400px; 
-    width: 400px;
-  }
-}
-
-
-@media (min-width: 1251px) and (max-width: 1400px){
-   h1 {
-    font-size: 3rem;
-    margin-top: 0px;
-  }
-  
-  body {
-    background-position: center;    
-  }
-
-  .benderGif {
-    height: 450px;
-  }
-
-  .box img {
-    width: 170px;
+    width: 17.5em;
   }
 
   .mainTask {
-    margin-top: 0px;
-    height: 400px; 
-    width: 400px;
+    height: 21.875em;
+    width: 28.75em;
+  }
+  .mainTask p {
+    font-size: 1.375em;
   }
 }

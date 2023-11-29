@@ -26,25 +26,27 @@ body {
 
 #mainContainer {
   /* border: 3px solid yellow; */
-  /* height: 100%; */
-  padding: 50px;
-  margin-top: 150px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 /* TITLE SECTION */
 h1 {
-  font-size: 6rem;
+  font-size: 6em;
   color: rgba(253, 253, 0, 0.836);
 }
 
 .topSection {
-  margin: 50px 0px;
+  margin: 50px 2px;
   /* border: 2px solid red; */
   text-align: center;
 }
 
 .box {
-  height:500px;
-  width: 33.3333%;
+  height: 500px;
+  width: 25%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -62,7 +64,7 @@ h1 {
 .midSection {
   /* border: 2px solid blue; */
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 500px;
 }
@@ -72,23 +74,24 @@ h1 {
   height: 400px;
   width: 530px;
   background-color: rgba(55, 87, 126, 0.876);
-  /* margin: 50px 40px 0px 30px; */
-  padding: 20px;
+  padding: 30px;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 15px;
 }
 
 .mainTask p {
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.7em;
   color: rgb(255, 255, 8);
-  margin-bottom: 30px;
+  margin-bottom: 1.875em;
 }
 
 .mainTask .rules{
   color: rgb(255, 255, 8);
-  font-size: 1.4rem;
+  font-size: 1.4em;
 }
 
 /* START BUTTON */
@@ -96,6 +99,18 @@ h1 {
   height: 50px;
   text-align: center;
 }
+
+.pressToPlay a {
+  border: 3px solid rgba(235, 235, 10, 0.959);
+  background-color: rgba(55, 87, 126, 0.876);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.pressToPlay a:hover {
+  background-color: rgb(49, 106, 176, 0.876);
+}
+
 .pressToPlay h2 {
   font-size: 5rem;
   margin-top: 30px;
