@@ -3,6 +3,7 @@
   src: url(../fonts/herculanum.ttf) format('truetype');
 }
 * {
+  width: auto;
   padding:  0;
   margin: 0;
   text-decoration: none;
@@ -16,49 +17,65 @@ a:hover, a:visited, a:link, a:active {
 }
 
 body {
-  background: url(../images/background1.jpg) no-repeat ;
+  background: url(../images/background1.jpg) no-repeat center center fixed ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  height: 100vh;
+}
+
+#mainContainer {
+  /* border: 3px solid yellow; */
+  /* height: 100%; */
+  padding: 50px;
+  margin-top: 150px;
 }
 /* TITLE SECTION */
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
   color: rgba(253, 253, 0, 0.836);
-  margin-top: 50px;
 }
-/* MAIN */
-/* .storySection, .benderGif, .pressToPlay {
-} */
+
+.topSection {
+  margin: 50px 0px;
+  /* border: 2px solid red; */
+  text-align: center;
+}
 
 .box {
-  height:300px;
-  width: 14%;
-  /* margin: 20px 15px; */
+  height:500px;
+  width: 33.3333%;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
+  /* border: 2px solid cyan; */
 }
 .box img {
   border-radius: 10px;
-  width: 200px;
-  border: 2px solid rgb(92, 120, 153);
+  width: 300px;
+  /* border: 2px solid rgb(92, 120, 153); */
+  border: 3px solid rgba(235, 235, 10, 0.959);
 }
+/* STORY AREA */
 
 /* GIF SECTION */
-.benderGif {
-  height: 500px;
+.midSection {
+  /* border: 2px solid blue; */
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 500px;
 }
 .mainTask {
   border: 3px solid rgba(235, 235, 10, 0.959);
   border-radius: 10px;
-  height: 320px;
+  height: 400px;
   width: 530px;
   background-color: rgba(55, 87, 126, 0.876);
-  margin: 50px 40px 0px 30px;
+  /* margin: 50px 40px 0px 30px; */
+  padding: 20px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
@@ -74,23 +91,15 @@ h1 {
   font-size: 1.4rem;
 }
 
-/* STORY AREA */
-.topSection {
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* START BUTTON */
 .pressToPlay {
   height: 50px;
   text-align: center;
 }
 .pressToPlay h2 {
-  font-size: 2rem;
-  margin-top: 5px;
+  font-size: 5rem;
+  margin-top: 30px;
   color: rgba(251, 251, 8, 0.801);
-  
+  /* border: 2px solid green; */
 }
 
