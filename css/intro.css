@@ -11,13 +11,28 @@
   font-family: herculanum;
 }
 
+:root {
+  --fc-brown: rgb(14, 134, 8);
+  --fc-blue: #0d6efd;
+  --fc-red: #dc3545;
+}
+
+.fc_brown {
+  color: var(--fc-brown);
+}
+.fc_blue {
+  color: var(--fc-blue);
+}
+.fc_red {
+  color: var(--fc-red);
+}
 
 a:hover, a:visited, a:link, a:active {
   color: inherit;
 }
 
 body {
-  background: url(../images/background1.jpg) no-repeat center center fixed ;
+  background: url(../images/background1.png) no-repeat center center fixed ;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
