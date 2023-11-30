@@ -1,3 +1,11 @@
+/*
+To add:
+Reset game, reset score
+Save current score in LocalStorage
+Save moves and fights in LocalStorage
+Media Queries
+*/
+
 var botScore = 0,
   playerScore = 0;
 // DOM

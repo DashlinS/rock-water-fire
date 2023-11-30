@@ -51,13 +51,14 @@
   }
 }
 
+/* need to fix background image height */
 @media (min-width: 951px) and (max-width: 1100px){
   .sectionOne, .sectionThree {
     display: none;
   }
 
   .sectionTwo {
-    width: 100%;
+    /* width: 100%; */
   }
   .choiceSection img {
     width: 90px;

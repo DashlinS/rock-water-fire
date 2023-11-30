@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>ATLA: Rock, Water, Fire!</title>
-	<link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/main-media.css">
-</head>
-<body>
-  <section class="mainContainer"></section>
-    <section class="box sectionOne">
-      <img src="./images/bannersLeft.png" alt="">
-    </section>
-    <section class="box sectionTwo">
-      <h2 class="boardName">ScoreBoard</h2>
-      <section class="scoreBoard">
-        <h3>PlayerScore</h3>
-        <section id="playerScore">0
+  <head>
+    <meta charset="UTF-8" />
+    <title>ATLA: Rock, Water, Fire!</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main-media.css" />
+  </head>
+  <body>
+    <section id="mainContainer">
+      <section class="box sectionOne">
+        <img src="./images/bannersLeft.png" alt="" />
+      </section>
+      <section class="mainGame">
+        <h2 class="boardName">ScoreBoard</h2>
+        <section class="scoreBoard">
+          <h3>Player Score</h3>
+          <section id="playerScore" class="score">0</section>
+          <section id="botScore" class="score">0</section>
+          <h3>Opponent Score</h3>
         </section>
-        <section id="botScore">0
+        <section class="scoreMessage">
+          <section><h4 id="message"></h4></section>
         </section>
-        <h3>EnemyScore</h3>
-      </section>
-      <section class="scoreMessage">
-        <section><h4 id="message"></h4></section>
-      </section>
-      <section class="gifSection">
-        <section class="gifBox">
-          <img id="warImg" src="./images/benderWar.jpg" alt="benderWar">
+        <section class="gifSection">
+          <section class="gifBox">
+            <img id="warImg" src="./images/benderWar.jpg" alt="benderWar" />
+          </section>
+        </section>
+        <section class="rules">
+          <p>
+            <span><img src="./images/earthTransparent.png" alt="" /></span
+            >Defeats<span
+              ><img src="./images/waterTransparent.png" alt="" /></span
+            >|
+            <span><img src="./images/waterTransparent.png" alt="" /></span
+            >Defeats<span
+              ><img src="./images/fireTransparent.png" alt=""
+            /></span>
+            |
+            <span><img src="./images/fireTransparent.png" alt="" /></span
+            >Defeats<span
+              ><img src="./images/earthTransparent.png" alt=""
+            /></span>
+          </p>
+        </section>
+        <section class="activity">
+          <section id="playerActivity"></section>
+          <section id="botActivity"></section>
+        </section>
+        <section class="choiceSection">
+          <section class="choiceOne">
+            <a href="#"><img id="rock" src="./images/earth.jpg" alt="" /></a>
+          </section>
+          <section class="choiceTwo">
+            <a href="#"><img id="water" src="./images/water.jpg" alt="" /></a>
+          </section>
+          <section class="choiceThree">
+            <a href="#"><img id="fire" src="./images/fire.jpg" alt="" /></a>
+          </section>
+        </section>
+        <section>
+          <h4 class="titleScreen">
+            <a href="./index.html">Back to Title Screen</a>
+          </h4>
+          <h4 id="reset">Reset</h4>
         </section>
       </section>
-      <section class="rules">
-        <p>
-          <span><img src="./images/earthTransparent.png" alt=""></span>Beats<span><img src="./images/waterTransparent.png" alt=""></span>|
-          <span><img src="./images/waterTransparent.png" alt=""></span>Beats<span><img src="./images/fireTransparent.png" alt=""></span>
-          | <span><img src="./images/fireTransparent.png" alt=""></span>Beats<span><img src="./images/earthTransparent.png" alt=""></span>
-        </p>
+      <section class="sectionThree">
+        <img src="./images/bannersRight.png" alt="" />
       </section>
-      <section class="activity">
-        <section id="playerActivity"></section>
-        <section id="botActivity"></section>
-      </section>
-      <section class="choiceSection">
-        <section class="choiceOne"><a href="#"><img id="rock" src="./images/earth.jpg" alt=""></a></section>
-        <section class="choiceTwo"><a href="#"><img id="water" src="./images/water.jpg" alt=""></a></section>
-        <section class="choiceThree"><a href="#"><img id="fire" src="./images/fire.jpg" alt=""></a></section>
-      </section>
-      <h4 class="titleScreen"><a href="./index.html">Back to Title Screen</a></h4>
     </section>
-    <section class="box sectionThree">
-      <img src="./images/bannersRight.png" alt="">
-    </section>
-  </section>
-  <script src="./js/main.js"></script>
-</body>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
