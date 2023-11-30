@@ -5,13 +5,17 @@ Save current score in LocalStorage
 Save moves and fights in LocalStorage
 Media Queries
 */
+let playerScoreVal = document.getElementById('playerScore').innerText;
+let botScoreVal = document.getElementById('botScore').innerText;
+const reset = document.getElementById('reset');
 
-var botScore = 0,
-  playerScore = 0;
-// DOM
 document.getElementById('rock').onclick = playerThrowsRock;
 document.getElementById('water').onclick = playerThrowsWater;
 document.getElementById('fire').onclick = playerThrowsFire;
+
+let botScore = +botScoreVal,
+  playerScore = +playerScoreVal;
+// DOM
 
 // GAME FUNCTION
 function playerThrowsRock() {
@@ -65,7 +69,7 @@ function checkWhoWon(botsWeapon, playersWeapon) {
 // INCREASE SCORE
 function increaseBotScore() {
   botScore += 1;
-  document.getElementById('botScore').innerHTML = botScore;
+  document.getElementById('botScore').innerText = botScore;
   displayCompleteMessage("You've Been Defeated!");
 
   if (botScore == 10) {
@@ -77,7 +81,7 @@ function increaseBotScore() {
 }
 function increasePlayerScore() {
   playerScore += 1;
-  document.getElementById('playerScore').innerHTML = playerScore;
+  document.getElementById('playerScore').innerText = playerScore;
   displayCompleteMessage("You've Won The Battle!");
 
   if (playerScore == 10) {
@@ -89,7 +93,7 @@ function increasePlayerScore() {
 
 // GAME MESSAGE
 function displayCompleteMessage(msg) {
-  document.getElementById('message').innerHTML = msg;
+  document.getElementById('message').innerText = msg;
 }
 
 // BENDING TEXT
@@ -118,3 +122,13 @@ function botBend(botWep) {
     document.querySelector('#botActivity').style.color = 'rgb(3, 199, 248)';
   }
 }
+
+//Reset Board
+const resetBoard = () => {
+  if (botScore || playerScore >= 1) {
+    console.log(playerScoreVal);
+  }
+};
+
+//Event Listeners
+reset.addEventListener('click', resetBoard);
