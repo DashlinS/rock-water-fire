@@ -123,7 +123,7 @@ a:hover, a:visited, a:link, a:active {
 }
 
 #warImg {
-  width: 100%;
+  /* width: 100%; */
 }
 /* ENEMY ACTIVITY */
 .activity{
@@ -182,4 +182,3 @@ a:hover, a:visited, a:link, a:active {
 .titleScreen {
   margin: 10px 0px;
 }
-

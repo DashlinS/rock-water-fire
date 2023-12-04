@@ -5,16 +5,17 @@ Save current score in LocalStorage
 Save moves and fights in LocalStorage
 Media Queries
 */
-let playerScoreVal = document.getElementById('playerScore').innerText;
-let botScoreVal = document.getElementById('botScore').innerText;
+let playerScoreVal = document.getElementById('playerScore');
+let botScoreVal = document.getElementById('botScore');
+let systemMsg = document.querySelectorAll('.msg');
 const reset = document.getElementById('reset');
 
 document.getElementById('rock').onclick = playerThrowsRock;
 document.getElementById('water').onclick = playerThrowsWater;
 document.getElementById('fire').onclick = playerThrowsFire;
 
-let botScore = +botScoreVal,
-  playerScore = +playerScoreVal;
+let botScore = +botScoreVal.innerText,
+  playerScore = +playerScoreVal.innerText;
 // DOM
 
 // GAME FUNCTION
@@ -64,6 +65,11 @@ function checkWhoWon(botsWeapon, playersWeapon) {
     } else {
       increasePlayerScore();
     }
+  } else {
+    document.querySelector('#playerActivity').innerText = 'GAME';
+    document.querySelector('#playerActivity').style.color = 'yellow';
+    document.querySelector('#botActivity').innerText = 'OVER';
+    document.querySelector('#botActivity').style.color = 'yellow';
   }
 }
 // INCREASE SCORE
@@ -76,7 +82,6 @@ function increaseBotScore() {
     document.querySelector('#warImg').style.display = 'none';
     document.querySelector('.gifBox').innerHTML =
       "<img src='./images/thatsRough.gif'>";
-    winnerChosen();
   }
 }
 function increasePlayerScore() {
@@ -124,11 +129,21 @@ function botBend(botWep) {
 }
 
 //Reset Board
-const resetBoard = () => {
+function resetBoard() {
   if (botScore || playerScore >= 1) {
-    console.log(playerScoreVal);
+    console.log(playerScore, botScore);
+    playerScore = 0;
+    botScore = 0;
+    playerScoreVal.innerText = 0;
+    botScoreVal.innerText = 0;
+
+    systemMsg.forEach((msg) => {
+      msg.innerText = '';
+    });
+
+    window.location.reload();
   }
-};
+}
 
 //Event Listeners
 reset.addEventListener('click', resetBoard);

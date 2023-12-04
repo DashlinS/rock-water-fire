@@ -10,11 +10,12 @@
   
     .pressToPlay h2 {
       font-size: 1.5em;
-      margin: 0em;
+      margin-top: 30px;
     }
   
     .midSection {
       justify-content: center;
+      height: auto;
     }
   
     .midSection .box {
@@ -24,6 +25,7 @@
     .mainTask {
       height: 20.625em;
       width: 12.5em;
+      padding: 0px;
     }
   
     .mainTask p {
@@ -33,15 +35,21 @@
     .mainTask .rules {
       font-size: 0.875em;
     }
+
+    #logo {
+      width: 100%;
+      margin: 0px;
+    }
 }
 
 @media(20em <= width <= 34em){
   h1 {
-    font-size: 3.5em;
+    font-size: 2em;
+          color: red;
   }
 
   .pressToPlay h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0em;
   }
 
@@ -51,7 +59,7 @@
 
   .midSection {
     justify-content: center;
-    height: 450px;
+    height: 300px;
     align-items: flex-start;
   }
 
@@ -60,9 +68,9 @@
   }
 
   .mainTask {
-    height: 20.75em;
-    width: 15.625em;
-    padding: 15px;
+    height: 15.75em;
+    width: 17.625em;
+    padding: 12px;
   }
 
   .mainTask p {
@@ -72,6 +80,11 @@
 
   .mainTask .rules {
     font-size: 1.125em;
+  }
+
+  #logo {
+    width: 300px;
+    margin: 0px;
   }
 }
 
@@ -135,6 +148,11 @@ and (-webkit-min-device-pixel-ratio: 1){
   .mainTask .rules {
     font-size: 0.9375em;
   }
+
+  #logo {
+    width: 350px;
+    margin: 0px;
+  }
 }
 /* laptops retina - 1124px */
 @media (65em <= width <= 76.5em) 
@@ -143,6 +161,7 @@ and (min-resolution: 192dpi){
   h1 {
     font-size: 4em;
   }
+  
   #mainContainer {
     margin: 0px;
     padding: 0px;
@@ -173,6 +192,11 @@ and (min-resolution: 192dpi){
 
   .mainTask .rules {
     font-size: 0.9375em;
+  }
+
+  #logo {
+    width: 350px;
+    margin: 0px;
   }
 }
 
@@ -211,10 +235,14 @@ and (min-resolution: 192dpi){
   .mainTask .rules {
     font-size: 1.0625em;
   }
+  #logo {
+    width: 400px;
+    margin: 0px;
+  }
 }
 
 /* larger screens 1824px*/ 
-@media (96.25em <= width <= 114em ){
+@media (96.25em <= width <= 114em){
   h1 {
     font-size: 5em;
   }
@@ -237,6 +265,10 @@ and (min-resolution: 192dpi){
   }
   .mainTask p {
     font-size: 1.2625em;
+  }
+  #logo {
+    width: 450px;
+    margin: 0px;
   }
 }
 
