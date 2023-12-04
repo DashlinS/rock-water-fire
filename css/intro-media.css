@@ -45,7 +45,6 @@
 @media(20em <= width <= 34em){
   h1 {
     font-size: 2em;
-          color: red;
   }
 
   .pressToPlay h2 {
