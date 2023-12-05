@@ -44,53 +44,47 @@
 
 @media(20em <= width <= 34em){
   h1 {
-    font-size: 2em;
+    font-size: 3em;
   }
 
   .pressToPlay h2 {
-    font-size: 1.5em;
-    margin: 0em;
+    font-size: 2.5em;
   }
 
   .pressToPlay a {
-    padding: 0.3125em;
+    /* padding: 0.3125em; */
   }
 
   .midSection {
     justify-content: center;
-    height: 300px;
-    align-items: flex-start;
   }
 
   .midSection .box {
     display: none;
   }
 
-  .mainTask {
-    height: 15.75em;
-    width: 17.625em;
-    padding: 12px;
+  .mainTask{
+    height: 300px;
+    padding:0px;
   }
 
   .mainTask p {
-    font-size: 1.125em;
-    /* margin-top: 20px; */
+    font-size: 1.3em;
   }
-
   .mainTask .rules {
-    font-size: 1.125em;
+    font-size: 1em;
   }
 
   #logo {
-    width: 300px;
-    margin: 0px;
+    width: 400px;
   }
+
 }
 
 /* ipad portrait 1024px*/
 @media (34em <= width <= 65em){
   h1 {
-    font-size: 5em;
+    font-size: 4.5em;
   }
   .pressToPlay h2 {
     font-size: 3em;
@@ -105,7 +99,7 @@
   }
 
   .mainTask .rules {
-    font-size: 1.8em;
+    /* font-size: 1.8em; */
   }
 }
 
@@ -122,7 +116,6 @@ and (-webkit-min-device-pixel-ratio: 1){
 
   .pressToPlay h2 {
     font-size: 3em;
-    margin: 0px;
   }
 
   .box {
@@ -168,7 +161,6 @@ and (min-resolution: 192dpi){
 
   .pressToPlay h2 {
     font-size: 3em;
-    margin: 0px;
   }
 
   .box {
@@ -210,8 +202,7 @@ and (min-resolution: 192dpi){
   }
 
   .pressToPlay h2 {
-    font-size: 3em;
-    margin: 0px;
+    font-size: 2em;
   }
 
   .box {
@@ -228,7 +219,6 @@ and (min-resolution: 192dpi){
   }
   .mainTask p {
     font-size: 0.9375em;
-    /* margin-top: 20px; */
   }
 
   .mainTask .rules {

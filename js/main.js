@@ -1,6 +1,6 @@
 /*
 To add:
-Reset game, reset score
+Reset game, reset score - done
 Save current score in LocalStorage
 Save moves and fights in LocalStorage
 Media Queries

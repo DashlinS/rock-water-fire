@@ -10,6 +10,10 @@
   font-family: herculanum;
 }
 
+html, body {
+  height: 100%;
+}
+
 a:hover, a:visited, a:link, a:active {
   color: inherit;
 }
@@ -19,34 +23,32 @@ a:hover, a:visited, a:link, a:active {
   background: url(../images/atlaMap.jpg) no-repeat center center;
   background-size: cover;
   display: flex;
-  justify-content: space-between;
-  height: 100vh;
-  
+  height: 100%;
 }
-.sectionOne, .sectionThree {
+
+.banner {
   display: flex;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.87);
+  background-color: rgba(0, 0, 0, 0.70);
 }
-.sectionOne img, .sectionThree img {
+.banner img {
   width: 300px;
 }
 
 /* SECTION ONE */
-.sectionOne {
-  flex-basis: 40%,
-}
-/* SECTION THREE */
-.sectionThree {
+.banner {
   flex-basis: 40%,
 }
 
 /* SECTION TWO */
 .mainGame{
-  height: 100vh;
   background-color: rgba(51, 67, 83, 0.952);
   width: 100%;
   /* overflow-x: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* align-content: center; */
 }
 
 /* SCOREBOARD */
@@ -81,6 +83,7 @@ a:hover, a:visited, a:link, a:active {
   margin: 0px 10px;
   font-size: 5em;
   color: rgba(235, 235, 10, 0.733);
+  background-color: #0009;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,6 +98,7 @@ a:hover, a:visited, a:link, a:active {
   width: 450px;
   height: 45px;
   border: 3px solid white;
+  background-color: #0009;
   color:rgba(235, 235, 10, 0.733);
   font-size: 2em;
   text-align: center;
@@ -122,22 +126,23 @@ a:hover, a:visited, a:link, a:active {
   justify-content: center;
 }
 
-#warImg {
-  /* width: 100%; */
-}
 /* ENEMY ACTIVITY */
 .activity{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 15px 0px;
+  width: 600px;
 }
 #botActivity, #playerActivity{
-  width: 250px;
+  width: 200px;
   border: 2px solid white;
+  background-color: #0009;
   height: 35px;
-  font-size: 2em;
-  text-align: center;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .rules {
@@ -145,7 +150,7 @@ a:hover, a:visited, a:link, a:active {
   height: 20px;
   color:white;
   font-size: 1.7em;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .rules img {
@@ -154,13 +159,14 @@ a:hover, a:visited, a:link, a:active {
 }
 
 /* CHOICE SECTION */
-.choiceSection{
+#choices{
+  width: 700px;
   height: 110px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
-.choiceSection img {
+#choices img {
   width: 100px;
 }
 

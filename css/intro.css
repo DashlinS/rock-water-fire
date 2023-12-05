@@ -91,7 +91,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 500px;
 }
 .mainTask {
   border: 3px solid rgba(235, 235, 10, 0.959);
@@ -99,7 +98,7 @@ h1 {
   height: 400px;
   width: 530px;
   background-color: rgba(55, 87, 126, 0.876);
-  padding: 30px;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,9 +108,9 @@ h1 {
 
 .mainTask p {
   text-align: center;
-  font-size: 1.7em;
+  font-size: 1.5em;
   color: rgb(255, 255, 8);
-  margin-bottom: 1.875em;
+  margin-bottom: 20px;;
 }
 
 .mainTask .rules{
@@ -138,7 +137,7 @@ h1 {
 
 .pressToPlay h2 {
   font-size: 5rem;
-  margin-top: 30px;
+  margin-top: 20px;
   color: rgba(251, 251, 8, 0.801);
   /* border: 2px solid green; */
 }

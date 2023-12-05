@@ -1,92 +1,202 @@
-@media only screen and (max-width: 500px){
-  .sectionOne, .sectionThree {
-    display: none;
+@media (width <= 20em) {
+}
+
+@media (320px <= width <= 544px) {
+  h2.boardName {
+      font-size: 4.5rem;
+      margin: 10px;
+    }
+  
+    .scoreBoard h3 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .score {
+      width: 120px;
+      height: 80px;
+      font-size: 4em;
+    }
+  
+    #message {
+      width: 450px;
+      height: 60px;
+      font-size: 2.5em;
+      margin: 15px 0px;
+    }
+  
+    .gifBox {
+      width: 450px;
+      height: 300px;
+      margin: 30px 0px;
+    }
+  
+    .gifBox img {
+      width: 100%;
+    }
+  
+    .activity {
+      height: 60px;
+      margin: 20px 0px;
+    }
+  
+    #playerActivity,
+    #botActivity {
+      height: 50px;
+      width: 240px;
+      font-size: 1.8em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    #choices {
+      height: 100px;
+      margin: 10px 0px;
+    }
+  
+    #choices img {
+      width: 100px;
+    }
+  
+    .allChoices {
+      height: auto;
+      width: auto;
+    }
+  
+    .mainGame {
+      display: flex;
+      flex-direction: column;
+      overflow-x: auto;
+    }
+  
+    .rules {
+      font-size: 1.3em;
+    }
+  
+    .banner {
+      display: none;
+    }
+  
+    .titleScreen {
+      margin: 30px 0px;
+      font-size: 2em;
+    }
+  
+    #reset {
+      font-size: 2em;
+    }
+}
+
+@media (34em <= width <= 65em) {
+  h2.boardName {
+    font-size: 5rem;
+    margin: 10px;
   }
 
-  .sectionTwo {
+  .scoreBoard h3 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .score {
+    width: 120px;
+    height: 80px;
+    font-size: 5em;
+  }
+
+  #message {
+    width: 500px;
+    height: 60px;
+    font-size: 2.5em; 
+    margin: 15px 0px;
+  }
+
+  .gifBox {
+    width: 500px;
+    height: 300px;
+    margin: 30px 0px;
+  }
+
+  .gifBox img {
     width: 100%;
   }
 
-  .choiceSection img {
-    width: 90px;
+  .activity {
+    height: 60px;
+    margin: 20px 0px;
   }
-}
 
-@media (min-width: 501px) and (max-width: 650px){
-  .sectionOne, .sectionThree {
+ #playerActivity, #botActivity {
+    height: 50px;
+    width: 250px;
+    font-size: 1.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #choices {
+    height: 120px;
+  }
+
+  #choices img {
+    width: 120px;
+  }
+
+  .allChoices {
+    height: auto;
+    width: auto;
+  }
+
+  .mainGame {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+  }
+
+  .rules {
+    font-size: 1.5em;
+  }
+
+  .banner {
     display: none;
   }
 
-  .sectionTwo {
-    width: 100%;
+  .titleScreen {
+    margin: 30px 0px;
+    font-size: 2em;
   }
-  .choiceSection img {
-    width: 90px;
+
+  #reset {
+    font-size: 2em;
   }
 }
-
-@media (min-width: 651px) and (max-width: 800px){
-  .sectionOne, .sectionThree {
+/* Some media queries fixes here */
+@media (65em <= width <= 76.5em) and (-webkit-min-device-pixel-ratio: 1) {
+    .rules {
+      font-size: 1.2em;
+    }
+  
+    .banner {
+      display: none;
+    }
+}
+/* Some media queries fixes here */
+@media (65em <= width <= 76.5em) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+   .rules {
+    font-size: 1.2em;
+   } 
+   .banner {
     display: none;
-  }
-
-  .sectionTwo {
-    width: 100%;
-  }
-  .choiceSection img {
-    width: 90px;
-  }
+   }
 }
 
-@media (min-width: 801px) and (max-width: 950px){
-  .sectionOne, .sectionThree {
-    display: none;
-  }
-
-  .sectionTwo {
-    width: 100%;
-  }
-  .choiceSection img {
-    width: 90px;
-  }
+@media (76.5em <= width <= 96.25em) {
 }
 
-/* need to fix background image height */
-@media (min-width: 951px) and (max-width: 1100px){
-  .sectionOne, .sectionThree {
-    display: none;
-  }
-
-  .sectionTwo {
-    /* width: 100%; */
-  }
-  .choiceSection img {
-    width: 90px;
-  }
+@media (96.25em <= width <= 114em) {
 }
 
-@media (min-width: 1101px) and (max-width: 1250px){
-  .sectionOne, .sectionThree {
-    width: 21%;
-  }
-  .sectionOne img, .sectionThree img{
-    width: 240px;
-  }
-
-  .sectionTwo {
-    width: 58%;
-  }
-  .choiceSection img {
-    width: 90px;
-  }
-}
-
-@media (min-width: 1251px) and (max-width: 1350px){
-  /* .box {
-    height: 100vh;
-  }
-
-  .sectionOne img, .sectionThree img{
-    width: 270px;
-  } */
+@media (114em <= width <= 130em) {
 }
