@@ -8,6 +8,10 @@ Media Queries
 let playerScoreVal = document.getElementById('playerScore');
 let botScoreVal = document.getElementById('botScore');
 let systemMsg = document.querySelectorAll('.msg');
+
+const playerActivity = document.querySelector('#playerActivity');
+const botActivity = document.querySelector('#botActivity');
+
 const reset = document.getElementById('reset');
 
 document.getElementById('rock').onclick = playerThrowsRock;
@@ -66,10 +70,10 @@ function checkWhoWon(botsWeapon, playersWeapon) {
       increasePlayerScore();
     }
   } else {
-    document.querySelector('#playerActivity').innerText = 'GAME';
-    document.querySelector('#playerActivity').style.color = 'yellow';
-    document.querySelector('#botActivity').innerText = 'OVER';
-    document.querySelector('#botActivity').style.color = 'yellow';
+    if (playerScore === 10) {
+    } else if (botScore === 10) {
+      console.log('bot wins');
+    }
   }
 }
 // INCREASE SCORE
@@ -79,9 +83,7 @@ function increaseBotScore() {
   displayCompleteMessage("You've Been Defeated!");
 
   if (botScore == 10) {
-    document.querySelector('#warImg').style.display = 'none';
-    document.querySelector('.gifBox').innerHTML =
-      "<img src='./images/thatsRough.gif'>";
+    document.getElementById('warImg').src = '/images/thatsRough.gif';
   }
 }
 function increasePlayerScore() {
@@ -90,9 +92,34 @@ function increasePlayerScore() {
   displayCompleteMessage("You've Won The Battle!");
 
   if (playerScore == 10) {
-    document.querySelector('#warImg').style.display = 'none';
-    document.querySelector('.gifBox').innerHTML =
-      "<img src='./images/winnerWaterTribe.gif'>";
+    document.getElementById('warImg').src = '/images/winnerWaterTribe.gif';
+  }
+}
+
+// BENDING TEXT
+function playerBend(playerWep) {
+  if (playerWep === 'rock') {
+    playerActivity.innerText = 'Earth Quake!';
+    playerActivity.style.color = 'rgb(9, 245, 28)';
+  } else if (playerWep === 'fire') {
+    playerActivity.innerText = 'Fire Cyclone!';
+    playerActivity.style.color = 'rgb(255,0, 0)';
+  } else if (playerWep === 'water') {
+    playerActivity.innerText = 'Water Slice!';
+    playerActivity.style.color = 'rgb(3, 199, 248)';
+  }
+}
+
+function botBend(botWep) {
+  if (botWep === 'rock') {
+    botActivity.innerText = 'Earth Quake!';
+    botActivity.style.color = 'rgb(9, 245, 28)';
+  } else if (botWep === 'fire') {
+    botActivity.innerText = 'Fire Cyclone!';
+    botActivity.style.color = 'rgb(255,0, 0)';
+  } else if (botWep === 'water') {
+    botActivity.innerText = 'Water Slice!';
+    botActivity.style.color = 'rgb(3, 199, 248)';
   }
 }
 
@@ -101,47 +128,21 @@ function displayCompleteMessage(msg) {
   document.getElementById('message').innerText = msg;
 }
 
-// BENDING TEXT
-function playerBend(playerWep) {
-  if (playerWep === 'rock') {
-    document.querySelector('#playerActivity').innerText = 'Earth Quake!';
-    document.querySelector('#playerActivity').style.color = 'rgb(9, 245, 28)';
-  } else if (playerWep === 'fire') {
-    document.querySelector('#playerActivity').innerText = 'Fire Cyclone!';
-    document.querySelector('#playerActivity').style.color = 'rgb(255,0, 0)';
-  } else if (playerWep === 'water') {
-    document.querySelector('#playerActivity').innerText = 'Water Slice!';
-    document.querySelector('#playerActivity').style.color = 'rgb(3, 199, 248)';
-  }
-}
-
-function botBend(botWep) {
-  if (botWep === 'rock') {
-    document.querySelector('#botActivity').innerText = 'Earth Quake!';
-    document.querySelector('#botActivity').style.color = 'rgb(9, 245, 28)';
-  } else if (botWep === 'fire') {
-    document.querySelector('#botActivity').innerText = 'Fire Cyclone!';
-    document.querySelector('#botActivity').style.color = 'rgb(255,0, 0)';
-  } else if (botWep === 'water') {
-    document.querySelector('#botActivity').innerText = 'Water Slice!';
-    document.querySelector('#botActivity').style.color = 'rgb(3, 199, 248)';
-  }
-}
-
 //Reset Board
 function resetBoard() {
-  if (botScore || playerScore >= 1) {
+  if (botScore || playerScore !== 0) {
     console.log(playerScore, botScore);
+
     playerScore = 0;
     botScore = 0;
     playerScoreVal.innerText = 0;
     botScoreVal.innerText = 0;
 
+    document.getElementById('warImg').src = './images/benderWar.jpg';
+
     systemMsg.forEach((msg) => {
       msg.innerText = '';
     });
-
-    window.location.reload();
   }
 }
 
