@@ -62,7 +62,6 @@ function getRandomWeapon() {
 // WHO WON MATCH SECTION
 function checkWhoWon(botsWeapon, playersWeapon) {
   if (playerScore !== 10 && botScore !== 10) {
-    console.log('tie');
     if (botsWeapon == playersWeapon) {
       displayCompleteMessage('You Both Retreated!');
     } else if (
@@ -79,7 +78,6 @@ function checkWhoWon(botsWeapon, playersWeapon) {
 // INCREASE SCORE
 function increaseBotScore() {
   botScore += 1;
-  // console.log(`botScore: ${botScore}`, typeof botScore);
   botScoreText.innerText = botScore;
   saveScoreToStorage();
   displayCompleteMessage("You've Been Defeated!");
@@ -91,7 +89,6 @@ function increaseBotScore() {
 
 function increasePlayerScore() {
   playerScore += 1;
-  // console.log(`playerScore: ${playerScore}`, typeof playerScore);
   playerScoreText.innerText = playerScore;
   saveScoreToStorage();
   displayCompleteMessage("You've Won The Battle!");
@@ -121,7 +118,10 @@ function getScoresFromStorage() {
   let currentScores;
 
   if (localStorage.getItem('scores') === null) {
-    currentScores = new Object();
+    currentScores = new Object({
+      playerScore: 0,
+      botScore: 0,
+    });
   } else {
     currentScores = JSON.parse(localStorage.getItem('scores'));
   }
@@ -164,18 +164,20 @@ function displayCompleteMessage(msg) {
 
 //Reset Board
 function resetBoard() {
-  if (botScore || playerScore !== 0) {
-    playerScore = 0;
-    botScore = 0;
-    playerScore.innerText = 0;
-    botScore.innerText = 0;
-
-    document.getElementById('warImg').src = './images/benderWar.jpg';
-
-    systemMsg.forEach((msg) => {
-      msg.innerText = '';
-    });
-  }
+  const scoresFromStorage = getScoresFromStorage();
+  console.log(scoresFromStorage);
+  // const scoresFromStorage = getScoresFromStorage();
+  // console.log(scoresFromStorage);
+  // if (botScore || playerScore !== 0) {
+  //   playerScore = 0;
+  //   botScore = 0;
+  //   playerScore.innerText = 0;
+  //   botScore.innerText = 0;
+  //   document.getElementById('warImg').src = './images/benderWar.jpg';
+  //   systemMsg.forEach((msg) => {
+  //     msg.innerText = '';
+  //   });
+  // }
 }
 
 //Event Listeners
