@@ -3,24 +3,27 @@ To add:
 Reset game, reset score - done
 Save current score in LocalStorage
 Save moves and fights in LocalStorage
-Media Queries
+Media Queries - done
 */
-let playerScoreVal = document.getElementById('playerScore');
-let botScoreVal = document.getElementById('botScore');
-let systemMsg = document.querySelectorAll('.msg');
+// let playerScoreVal;
+// let botScoreVal;
 
 const playerActivity = document.querySelector('#playerActivity');
 const botActivity = document.querySelector('#botActivity');
-
 const reset = document.getElementById('reset');
+const systemMsg = document.querySelectorAll('.msg');
+const scoresFromStorage = getScoresFromStorage();
 
 document.getElementById('rock').onclick = playerThrowsRock;
 document.getElementById('water').onclick = playerThrowsWater;
 document.getElementById('fire').onclick = playerThrowsFire;
 
-let botScore = +botScoreVal.innerText,
-  playerScore = +playerScoreVal.innerText;
-// DOM
+//VARIABLES
+let botScoreText = document.getElementById('botScore'); //0
+let playerScoreText = document.getElementById('playerScore');
+
+let botScore = scoresFromStorage.botScore;
+let playerScore = scoresFromStorage.playerScore;
 
 // GAME FUNCTION
 function playerThrowsRock() {
@@ -29,6 +32,7 @@ function playerThrowsRock() {
   botBend(botsWeapon);
   checkWhoWon(botsWeapon, 'rock');
 }
+
 function playerThrowsWater() {
   let botsWeapon = getRandomWeapon();
   playerBend('water');
@@ -58,6 +62,7 @@ function getRandomWeapon() {
 // WHO WON MATCH SECTION
 function checkWhoWon(botsWeapon, playersWeapon) {
   if (playerScore !== 10 && botScore !== 10) {
+    console.log('tie');
     if (botsWeapon == playersWeapon) {
       displayCompleteMessage('You Both Retreated!');
     } else if (
@@ -69,31 +74,58 @@ function checkWhoWon(botsWeapon, playersWeapon) {
     } else {
       increasePlayerScore();
     }
-  } else {
-    if (playerScore === 10) {
-    } else if (botScore === 10) {
-      console.log('bot wins');
-    }
   }
 }
 // INCREASE SCORE
 function increaseBotScore() {
   botScore += 1;
-  document.getElementById('botScore').innerText = botScore;
+  // console.log(`botScore: ${botScore}`, typeof botScore);
+  botScoreText.innerText = botScore;
+  saveScoreToStorage();
   displayCompleteMessage("You've Been Defeated!");
 
   if (botScore == 10) {
     document.getElementById('warImg').src = '/images/thatsRough.gif';
   }
 }
+
 function increasePlayerScore() {
   playerScore += 1;
-  document.getElementById('playerScore').innerText = playerScore;
+  // console.log(`playerScore: ${playerScore}`, typeof playerScore);
+  playerScoreText.innerText = playerScore;
+  saveScoreToStorage();
   displayCompleteMessage("You've Won The Battle!");
 
   if (playerScore == 10) {
     document.getElementById('warImg').src = '/images/winnerWaterTribe.gif';
   }
+}
+
+function displayScores() {
+  const scoresFromStorage = getScoresFromStorage();
+
+  botScoreText.innerText = scoresFromStorage.botScore;
+  playerScoreText.innerText = scoresFromStorage.playerScore;
+}
+
+function saveScoreToStorage() {
+  const scoresFromStorage = getScoresFromStorage();
+
+  scoresFromStorage['playerScore'] = playerScore;
+  scoresFromStorage['botScore'] = botScore;
+
+  localStorage.setItem('scores', JSON.stringify(scoresFromStorage));
+}
+
+function getScoresFromStorage() {
+  let currentScores;
+
+  if (localStorage.getItem('scores') === null) {
+    currentScores = new Object();
+  } else {
+    currentScores = JSON.parse(localStorage.getItem('scores'));
+  }
+  return currentScores;
 }
 
 // BENDING TEXT
@@ -123,6 +155,8 @@ function botBend(botWep) {
   }
 }
 
+// function deleteScore() {}
+
 // GAME MESSAGE
 function displayCompleteMessage(msg) {
   document.getElementById('message').innerText = msg;
@@ -131,12 +165,10 @@ function displayCompleteMessage(msg) {
 //Reset Board
 function resetBoard() {
   if (botScore || playerScore !== 0) {
-    console.log(playerScore, botScore);
-
     playerScore = 0;
     botScore = 0;
-    playerScoreVal.innerText = 0;
-    botScoreVal.innerText = 0;
+    playerScore.innerText = 0;
+    botScore.innerText = 0;
 
     document.getElementById('warImg').src = './images/benderWar.jpg';
 
@@ -148,3 +180,5 @@ function resetBoard() {
 
 //Event Listeners
 reset.addEventListener('click', resetBoard);
+
+document.addEventListener('DOMContentLoaded', displayScores);
