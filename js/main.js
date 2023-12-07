@@ -1,25 +1,11 @@
-/*
-To add:
-Reset game, reset score - done
-Save current score in LocalStorage
-Save moves and fights in LocalStorage
-Media Queries - done
-*/
-// let playerScoreVal;
-// let botScoreVal;
-
 const playerActivity = document.querySelector('#playerActivity');
 const botActivity = document.querySelector('#botActivity');
 const reset = document.getElementById('reset');
 const systemMsg = document.querySelectorAll('.msg');
-const scoresFromStorage = getScoresFromStorage();
-
-document.getElementById('rock').onclick = playerThrowsRock;
-document.getElementById('water').onclick = playerThrowsWater;
-document.getElementById('fire').onclick = playerThrowsFire;
 
 //VARIABLES
-let botScoreText = document.getElementById('botScore'); //0
+const scoresFromStorage = getScoresFromStorage();
+let botScoreText = document.getElementById('botScore');
 let playerScoreText = document.getElementById('playerScore');
 
 let botScore = scoresFromStorage.botScore;
@@ -46,6 +32,7 @@ function playerThrowsFire() {
   botBend(botsWeapon);
   checkWhoWon(botsWeapon, 'fire');
 }
+
 // RANDOMIZE BOT
 function getRandomWeapon() {
   var randomNumber = Math.random();
@@ -59,11 +46,11 @@ function getRandomWeapon() {
   return botsWeapon;
 }
 
-// WHO WON MATCH SECTION
 function checkWhoWon(botsWeapon, playersWeapon) {
   if (playerScore !== 10 && botScore !== 10) {
     if (botsWeapon == playersWeapon) {
-      displayCompleteMessage('You Both Retreated!');
+      displayGameMessage('You Both Retreated!');
+      saveScoreToStorage();
     } else if (
       (botsWeapon == 'water' && playersWeapon == 'fire') ||
       (botsWeapon == 'fire' && playersWeapon == 'rock') ||
@@ -79,8 +66,8 @@ function checkWhoWon(botsWeapon, playersWeapon) {
 function increaseBotScore() {
   botScore += 1;
   botScoreText.innerText = botScore;
+  displayGameMessage("You've Been Defeated!");
   saveScoreToStorage();
-  displayCompleteMessage("You've Been Defeated!");
 
   if (botScore == 10) {
     document.getElementById('warImg').src = '/images/thatsRough.gif';
@@ -90,12 +77,18 @@ function increaseBotScore() {
 function increasePlayerScore() {
   playerScore += 1;
   playerScoreText.innerText = playerScore;
+  displayGameMessage("You've Won The Battle!");
   saveScoreToStorage();
-  displayCompleteMessage("You've Won The Battle!");
 
   if (playerScore == 10) {
     document.getElementById('warImg').src = '/images/winnerWaterTribe.gif';
   }
+}
+
+// GAME MESSAGE
+function displayGameMessage(msg) {
+  message = document.getElementById('message').innerText = msg;
+  saveScoreToStorage();
 }
 
 function displayScores() {
@@ -103,15 +96,7 @@ function displayScores() {
 
   botScoreText.innerText = scoresFromStorage.botScore;
   playerScoreText.innerText = scoresFromStorage.playerScore;
-}
-
-function saveScoreToStorage() {
-  const scoresFromStorage = getScoresFromStorage();
-
-  scoresFromStorage['playerScore'] = playerScore;
-  scoresFromStorage['botScore'] = botScore;
-
-  localStorage.setItem('scores', JSON.stringify(scoresFromStorage));
+  document.getElementById('message').innerText = scoresFromStorage.msg;
 }
 
 function getScoresFromStorage() {
@@ -121,11 +106,23 @@ function getScoresFromStorage() {
     currentScores = new Object({
       playerScore: 0,
       botScore: 0,
+      msg: '',
     });
   } else {
     currentScores = JSON.parse(localStorage.getItem('scores'));
   }
   return currentScores;
+}
+
+function saveScoreToStorage() {
+  const scoresFromStorage = getScoresFromStorage();
+  console.log(scoresFromStorage.msg);
+
+  scoresFromStorage['playerScore'] = playerScore;
+  scoresFromStorage['botScore'] = botScore;
+  scoresFromStorage['msg'] = message;
+
+  localStorage.setItem('scores', JSON.stringify(scoresFromStorage));
 }
 
 // BENDING TEXT
@@ -155,32 +152,26 @@ function botBend(botWep) {
   }
 }
 
-// function deleteScore() {}
-
-// GAME MESSAGE
-function displayCompleteMessage(msg) {
-  document.getElementById('message').innerText = msg;
-}
-
 //Reset Board
 function resetBoard() {
-  const scoresFromStorage = getScoresFromStorage();
-  console.log(scoresFromStorage);
-  // const scoresFromStorage = getScoresFromStorage();
-  // console.log(scoresFromStorage);
-  // if (botScore || playerScore !== 0) {
-  //   playerScore = 0;
-  //   botScore = 0;
-  //   playerScore.innerText = 0;
-  //   botScore.innerText = 0;
-  //   document.getElementById('warImg').src = './images/benderWar.jpg';
-  //   systemMsg.forEach((msg) => {
-  //     msg.innerText = '';
-  //   });
-  // }
+  localStorage.clear();
+  playerScoreText.innerText = 0;
+  botScoreText.innerText = 0;
+
+  playerScore = 0;
+  botScore = 0;
+
+  systemMsg.forEach((msg) => {
+    msg.innerText = '';
+  });
+
+  document.getElementById('warImg').src = '/images/benderWar.jpg';
 }
 
 //Event Listeners
 reset.addEventListener('click', resetBoard);
 
 document.addEventListener('DOMContentLoaded', displayScores);
+document.getElementById('rock').onclick = playerThrowsRock;
+document.getElementById('water').onclick = playerThrowsWater;
+document.getElementById('fire').onclick = playerThrowsFire;
