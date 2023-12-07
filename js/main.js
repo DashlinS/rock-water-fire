@@ -49,7 +49,7 @@ function getRandomWeapon() {
 function checkWhoWon(botsWeapon, playersWeapon) {
   if (playerScore !== 10 && botScore !== 10) {
     if (botsWeapon == playersWeapon) {
-      displayGameMessage('You Both Retreated!');
+      displayGameMessage('Both Sides Retreated!');
       saveScoreToStorage();
     } else if (
       (botsWeapon == 'water' && playersWeapon == 'fire') ||
@@ -66,7 +66,7 @@ function checkWhoWon(botsWeapon, playersWeapon) {
 function increaseBotScore() {
   botScore += 1;
   botScoreText.innerText = botScore;
-  displayGameMessage("You've Been Defeated!");
+  displayGameMessage('You Were Defeated!');
   saveScoreToStorage();
 
   if (botScore == 10) {
@@ -77,7 +77,7 @@ function increaseBotScore() {
 function increasePlayerScore() {
   playerScore += 1;
   playerScoreText.innerText = playerScore;
-  displayGameMessage("You've Won The Battle!");
+  displayGameMessage('You Won The Battle!');
   saveScoreToStorage();
 
   if (playerScore == 10) {

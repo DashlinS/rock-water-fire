@@ -1,14 +1,14 @@
 @media (width <= 20em) {
 }
 
-@media (320px <= width <= 544px) {
+@media (20em <= width <= 34em) {
   h2.boardName {
-      font-size: 4.5rem;
+      font-size: 4rem;
       margin: 10px;
     }
   
     .scoreBoard h3 {
-      font-size: 2rem;
+      font-size: 2em;
       text-align: center;
     }
   
@@ -19,15 +19,19 @@
     }
   
     #message {
-      width: 450px;
-      height: 60px;
-      font-size: 2.5em;
+      width: 400px;
+      height: 50px;
+      font-size: 2em;
       margin: 15px 0px;
+    }
+
+    .gifSection {
+      margin: 0px;
     }
   
     .gifBox {
-      width: 450px;
-      height: 300px;
+      width: 350px;
+      height: 200px;
       margin: 30px 0px;
     }
   
@@ -43,8 +47,7 @@
     #playerActivity,
     #botActivity {
       height: 50px;
-      width: 240px;
-      font-size: 1.8em;
+      width: 200px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -53,6 +56,8 @@
     #choices {
       height: 100px;
       margin: 10px 0px;
+      width: 400px;
+      justify-content: space-between;
     }
   
     #choices img {
@@ -71,7 +76,7 @@
     }
   
     .rules {
-      font-size: 1.3em;
+      font-size: 1em;
     }
   
     .banner {
@@ -79,42 +84,45 @@
     }
   
     .titleScreen {
-      margin: 30px 0px;
-      font-size: 2em;
+      font-size: 1.5em;
     }
   
     #reset {
-      font-size: 2em;
+      font-size: 1.5em;
     }
 }
 
 @media (34em <= width <= 65em) {
   h2.boardName {
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 10px;
   }
 
   .scoreBoard h3 {
-    font-size: 2.5rem;
+    font-size: 2em;
     text-align: center;
   }
 
   .score {
     width: 120px;
     height: 80px;
-    font-size: 5em;
+    font-size: 4em;
   }
 
   #message {
-    width: 500px;
-    height: 60px;
-    font-size: 2.5em; 
+    width: 400px;
+    height: 50px;
+    font-size: 2em; 
     margin: 15px 0px;
   }
 
+  .gifSection {
+    margin: 0px;
+  }
+
   .gifBox {
-    width: 500px;
-    height: 300px;
+    width: 350px;
+    height: 200px;
     margin: 30px 0px;
   }
 
@@ -129,19 +137,21 @@
 
  #playerActivity, #botActivity {
     height: 50px;
-    width: 250px;
-    font-size: 1.8em;
+    width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   #choices {
-    height: 120px;
+    height: 100px;
+    margin: 10px 0px;
+    width: 400px;
+    justify-content: space-between;
   }
 
   #choices img {
-    width: 120px;
+    width: 100px;
   }
 
   .allChoices {
@@ -156,7 +166,7 @@
   }
 
   .rules {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 
   .banner {
@@ -164,12 +174,11 @@
   }
 
   .titleScreen {
-    margin: 30px 0px;
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   #reset {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 /* Some media queries fixes here */
